@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niacinamide 10% | Swanelle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-bar">GLOW WITH GRACE</div>
+
+  <header class="navbar">
+    <div class="logo"><a href="index.html" style="text-decoration:none; color:#000;">SWANELLE</a></div>
+    <nav class="nav">
+      <a href="index.html">← BACK TO SHOP</a>
+    </nav>
+    <div class="icons">
+
+           <span>SEARCH</span>
+   <span>BAG [<span id="cart-count">0</span>]</span>
+    </div>
+  </header>
+
+  <main class="product-page-layout">
+    <div class="product-visual">
+       <img src="images/swanelle-moisturizer.png" alt="moisturizer">
+    </div>
+
+    <div class="product-details">
+      <p class="category-tag">creams</p>
+      <h1>Natural Moisturizing Factors</h1>
+      <p class="price">$15.00</p>
+      
+      <div class="clinical-box">
+        <p><strong>PH:</strong> 5.50 - 6.50</p>
+        <p><strong>CRUELTY-FREE:</strong> Yes</p>
+        <p><strong>VEGAN:</strong> Yes</p>
+      </div>
+
+    <button class="add-btn" data-name="Natural Moisturizing Factors" data-price="15.00">ADD TO BAG</button>
+
+      <div class="info-accordion">
+        <h3>How to use</h3>
+        <p>Apply to entire face morning and evening before heavier creams. If irritation occurs, cease use and consult a physician.</p>
+        
+        <h3>Ingredients</h3>
+        <p>Aqua (Water), Niacinamide, Pentylene Glycol, Zinc PCA, Dimethyl Isosorbide, Tamarix Indica Seed Gum, Xanthan Gum, Isoceteth-20, Ethoxydiglycol, Phenoxyethanol, Chlorphenesin.</p>
+      </div>
+    </div>
+  </main>
+
+
+
+<div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+        <h3>YOUR BAG</h3>
+        <span id="close-cart" style="cursor:pointer; letter-spacing:2px;">CLOSE</span>
+    </div>
+    
+    <div id="cart-items-container">
+        <p style="text-align:center; margin-top:50px; font-size:12px; color:#999;">Your bag is currently empty.</p>
+    </div>
+
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>TOTAL</span>
+            <span id="cart-total-amount">$0.00</span>
+        </div>
+        <button class="add-btn" id="checkout-btn">PROCEED TO CHECKOUT</button>
+        <button id="clear-cart" style="background:none; border:none; color:red; font-size:10px; cursor:pointer; margin-top:10px; letter-spacing:1px;">EMPTY BAG</button>
+    </div>
+</div>
+<div id="cart-overlay" class="cart-overlay"></div>
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <p>© 2026 SWANELLE. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+<script>
+    const cartCountElement = document.getElementById('cart-count');
+    const drawer = document.getElementById('cart-drawer');
+    const overlay = document.getElementById('cart-overlay');
+    const openBtn = document.querySelector('.icons span:last-child');
+    const closeBtn = document.getElementById('close-cart');
+    const clearBtn = document.getElementById('clear-cart');
+    const itemsContainer = document.getElementById('cart-items-container');
+    const totalAmountElement = document.getElementById('cart-total-amount');
+
+    // 1. Load existing items from memory
+    let cart = JSON.parse(localStorage.getItem('swanelleCart')) || [];
+
+    // 2. Function to update the drawer content
+    function updateDrawer() {
+        itemsContainer.innerHTML = "";
+        let total = 0;
+
+        if (cart.length === 0) {
+            itemsContainer.innerHTML = '<p style="text-align:center; margin-top:50px; font-size:12px; color:#999;">Your bag is currently empty.</p>';
+        } else {
+            cart.forEach((item, index) => {
+                total += parseFloat(item.price);
+                itemsContainer.innerHTML += `
+                    <div style="display:flex; justify-content:space-between; margin-bottom:20px; font-size:12px; align-items:center;">
+                        <div>
+                            <p style="font-weight:700; text-transform:uppercase;">${item.name}</p>
+                            <p>$${item.price}</p>
+                        </div>
+                        <span style="cursor:pointer; color:red; font-size:10px;" onclick="removeItem(${index})">REMOVE</span>
+                    </div>
+                `;
+            });
+        }
+        
+        cartCountElement.innerText = cart.length;
+        totalAmountElement.innerText = `$${total.toFixed(2)}`;
+        localStorage.setItem('swanelleCart', JSON.stringify(cart));
+    }
+
+    // 3. Remove single item
+    window.removeItem = (index) => {
+        cart.splice(index, 1);
+        updateDrawer();
+    };
+
+    // 4. Add to Bag Logic
+    document.querySelectorAll('.add-btn:not(#checkout-btn)').forEach(button => {
+        button.addEventListener('click', () => {
+            const name = button.getAttribute('data-name');
+            const price = button.getAttribute('data-price');
+            
+            cart.push({ name, price });
+            updateDrawer();
+
+            // Chic Feedback
+            button.innerText = "ADDED ✓";
+            setTimeout(() => { button.innerText = "ADD TO BAG"; }, 1000);
+            
+            // Open drawer
+            drawer.classList.add('open');
+            overlay.classList.add('open');
+        });
+    });
+
+    // 5. Drawer Controls
+    openBtn.onclick = () => { drawer.classList.add('open'); overlay.classList.add('open'); }
+    closeBtn.onclick = () => { drawer.classList.remove('open'); overlay.classList.remove('open'); }
+    overlay.onclick = () => { drawer.classList.remove('open'); overlay.classList.remove('open'); }
+    clearBtn.onclick = () => { if(confirm("Empty bag?")) { cart = []; updateDrawer(); } }
+
+    // Initialize display on load
+    updateDrawer();
+</script>
+</body>
+</html>

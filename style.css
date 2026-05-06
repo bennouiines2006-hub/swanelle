@@ -1,0 +1,713 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+/* Add this at the very top of your CSS */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* --- 1. GLOBAL STYLES & FONTS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #111;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 2. THE CHIC BABY PINK ACCENTS --- */
+:root {
+    --baby-pink: #fce4ec; /* Softest pink */
+    --accent-pink: #f8bbd0; /* Slightly deeper for buttons */
+    --clinical-gray: #f2f2f2;
+}
+
+/* --- 3. HEADER & NAV (The Ordinary Style) --- */
+.top-bar {
+    background-color: var(--baby-pink);
+    color: #000;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--clinical-gray);
+    background: #fff;
+}
+
+.logo {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 11px;
+    font-weight: 600;
+    margin: 0 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+     
+
+
+.nav a:hover {
+    color: var(--accent-pink);
+}
+
+
+
+.icons {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+
+/* --- 4. HERO SECTION --- */
+.hero-main {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+    background-color: #000;
+}
+
+
+
+
+
+
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8; /* Makes the white text pop */
+}
+
+
+
+
+
+
+
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    color: #fff;
+    max-width: 600px;
+}
+
+
+
+
+
+
+
+
+
+.hero-brand {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 80px;
+    letter-spacing: 15px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+.hero-slogan {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+
+.hero-desc {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+
+
+
+
+
+
+.cta-outline {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.4s ease;
+}
+
+
+
+
+
+.cta-outline:hover {
+    background-color: var(--baby-pink);
+    color: #000;
+    border-color: var(--baby-pink);
+}
+
+
+
+
+/* --- 5. PRODUCT GRID (Clean & Clinical) --- */
+.product-section {
+    padding: 80px 40px;
+}
+
+
+
+
+
+
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+.product-card {
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
+
+
+.product-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    background-color: var(--clinical-gray); /* Gives that empty studio look */
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+.product-card h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.product-card p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+.add-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+
+
+
+
+
+.add-btn:hover {
+    background-color: var(--accent-pink);
+    color: #000;
+}
+
+
+
+
+
+/* --- 6. HERO SPLIT (The "Vanessa" Section) --- */
+.hero-split {
+    display: flex;
+    align-items: center;
+    background-color: var(--baby-pink);
+    height: 600px;
+}
+
+
+
+
+
+.split-image, .split-text {
+    flex: 1;
+}
+
+.split-image img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.split-text {
+    padding: 80px;
+}
+
+.split-text h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+/* --- 7. COLLECTIONS (The Bottom Grid) --- */
+.collections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.col-card {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.col-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #fff;
+    padding: 10px 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+/* --- 8. FOOTER --- */
+.footer {
+    text-align: center;
+    padding: 60px 0;
+    border-top: 1px solid var(--clinical-gray);
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blurs the image behind the nav */
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+
+
+.product-card {
+    overflow: hidden; /* Keeps the zoom inside the box */
+}
+
+
+.product-card img {
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.product-card:hover img {
+    transform: scale(1.05); /* Very tiny, classy zoom */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Make the scrollbar thin and baby pink */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-pink);
+    border-radius: 10px;
+}
+
+
+
+
+
+/* Makes the prices look sophisticated */
+.product-card p {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: #888;
+}
+
+
+
+
+
+
+
+.product-card img {
+    border-radius: 2px;
+    box-shadow: 0 10px 30px rgba(252, 228, 236, 0.3); /* Uses your baby pink as a shadow! */
+    transition: box-shadow 0.5s ease;
+}
+
+.product-card:hover img {
+    box-shadow: 0 20px 40px rgba(248, 187, 208, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-content {
+    backdrop-filter: blur(2px);
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-brand {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+
+/* --- PRODUCT PAGE LAYOUT --- */
+.product-page-layout {
+    display: flex;
+    padding: 80px 10%;
+    gap: 100px;
+}
+
+.product-visual {
+    flex: 1.2;
+    background-color: var(--clinical-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.product-visual img {
+    width: 100%;
+    max-width: 500px;
+    object-fit: contain;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.category-tag {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--accent-pink);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.product-details h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 38px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.clinical-box {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.add-btn.large {
+    height: 60px;
+    font-size: 13px;
+    margin-bottom: 40px;
+}
+
+.info-accordion h3 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 25px 0 10px 0;
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 5px;
+}
+
+.info-accordion p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+}
+
+
+
+
+
+/* --- CART DRAWER STYLES --- */
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Hidden by default */
+    width: 350px;
+    height: 100%;
+    background: #fff;
+    z-index: 2000;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.05);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-drawer.open {
+    right: 0;
+}
+
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 1500;
+    display: none;
+}
+
+.cart-overlay.open {
+    display: block;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.cart-footer {
+    margin-top: auto;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.search-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px); /* The "Glass" effect */
+    z-index: 3000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.search-content { width: 60%; text-align: center; }
+
+#search-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 32px;
+    font-family: 'Times New Roman', serif;
+    text-align: center;
+    outline: none;
+    letter-spacing: 2px;
+}
+
+.search-line {
+    height: 1px;
+    background: #000;
+    width: 100%;
+    margin-top: 10px;
+    transform: scaleX(0);
+    transition: transform 0.6s ease;
+}
+
+#search-input:focus + .search-line { transform: scaleX(1); }
+
+#close-search {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    font-size: 12px;
+    letter-spacing: 2px;
+}

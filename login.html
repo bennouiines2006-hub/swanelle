@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Swanelle | Login</title>
+</head>
+<body style="background: #fafafa; display: flex; justify-content: center; align-items: center; height: 100vh;">
+
+    <div class="login-card" style="background: #fff; padding: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); width: 100%; max-width: 400px; text-align: center;">
+        <h2 style="font-family: 'Playfair Display', serif; letter-spacing: 5px; margin-bottom: 10px;">WELCOME BACK</h2>
+        <p style="font-size: 11px; letter-spacing: 2px; color: #999; margin-bottom: 30px;">ENTER YOUR REGISTRY DETAILS</p>
+
+        <form action="login.php" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            <input type="email" name="email" placeholder="EMAIL" required style="padding: 15px; border: 1px solid #eee; outline: none;">
+            <input type="password" name="password" placeholder="PASSWORD" required style="padding: 15px; border: 1px solid #eee; outline: none;">
+            
+            <button type="submit" class="add-btn" style="background: #000; color: #fff; padding: 15px; cursor: pointer; border: none; letter-spacing: 2px; margin-top: 10px;">LOG IN</button>
+        </form>
+        
+        <p style="margin-top: 25px; font-size: 10px; letter-spacing: 1px;">DON'T HAVE AN ACCOUNT? <a href="#" style="color: #000;">JOIN THE REGISTRY</a></p>
+    </div>
+
+</body>
+</html>

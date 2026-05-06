@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swanelle | Glow with Grace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-bar">SWANELLE</div>
+
+  <header class="navbar">
+    <div class="logo">GLOW WITH GRACE</div>
+   <nav class="nav">
+  <a href="#shop">SHOP</a> <a href="#">INGREDIENTS</a>
+  <a href="#">CONCERNS</a>
+</nav>
+    <div class="icons">
+      <span>SEARCH</span>
+      <span>BAG [<span id="cart-count">0</span>]</span>
+    </div>
+  </header>
+    
+
+
+
+
+
+
+  <section class="hero-main">
+    <img src="images/swanelle-hero.png" alt="Swanelle Lifestyle" class="bg-img">
+    <div class="hero-content">
+      <h2 class="hero-brand">SWANELLE</h2>
+      <h1 class="hero-slogan">Glow with Grace.</h1>
+      <p class="hero-desc">Functional beauty focused on clinical science and integrity.</p>
+      <a href="#" class="cta-outline">SHOP THE COLLECTION</a>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+ <section id="shop" class="product-section"></section>
+    <div class="grid">
+      <div class="product-card">
+        <a href="product.html">
+        <img src="images/swanelle-niacinamide.png" alt="Niacinamide">
+        </a>
+
+
+       
+
+  
+
+      
+
+
+
+
+
+
+
+
+        <div class="product-info">
+          <h3>Niacinamide 10% + Zinc 1%</h3>
+          <p>$12.00</p>
+          <button class="add-btn">ADD TO BAG</button>
+        </div>
+      </div>
+      <div class="product-card">
+
+
+
+
+         <a href="copper.html">
+        <img src="images/swanelle-copper.png" alt="Copper Peptides">
+        </a>
+
+
+
+
+        <div class="product-info">
+          <h3>Copper Peptides 1%</h3>
+          <p>$30.00</p>
+          <button class="add-btn">ADD TO BAG</button>
+        </div>
+      </div>
+      <div class="product-card">
+      <a href="moisturizer.html"><img src="images/swanelle-moisturizer.png"  alt="Moisturizer"></a>
+
+      
+
+
+        <div class="product-info">
+          <h3>Natural Moisturizing Factors</h3>
+          <p>$15.00</p>
+          <button class="add-btn">ADD TO BAG</button>
+        </div>
+      </div>
+      <div class="product-card">
+
+
+
+
+
+
+        
+       
+       
+         <a href="cleanser.html"><img src="images/swanelle-cleanser.png" alt="Cleanser"></a> 
+         
+         
+         
+         <div class="product-info">
+          <h3>Glucoside Foaming Cleanser</h3>
+          <p>$10.00</p>
+          <button class="add-btn">ADD TO BAG</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero-split">
+    <div class="split-image">
+      <img src="images/swanelle-lifestyle-2.png" alt="Skin Results">
+    </div>
+    <div class="split-text">
+      <h2>Results You Can Feel.</h2>
+      <p>Our formulations are clinical, transparent, and focused on skin health above all else.</p>
+      <a href="#" class="underline-link">View Clinical Studies</a>
+    </div>
+  </section>
+
+  <section class="collections">
+    <div class="col-card">
+      <img src="images/swanelle-vegan-line.png" alt="Vegan">
+      <div class="overlay-text">THE VEGAN EDITION</div>
+    </div>
+    <div class="col-card">
+      <img src="images/swanelle-cream-stack.png" alt="Stack">
+      <div class="overlay-text">MOISTURIZING STACK</div>
+    </div>
+    <div class="col-card wide">
+      <img src="images/swanelle-full-set.png" alt="Full Set">
+      <div class="overlay-text">THE COMPLETE REGIMEN</div>
+    </div>
+    <div class="col-card">
+      <img src="images/swanelle-hair.png" alt="Hair">
+      <div class="overlay-text">HAIR CARE SCIENCE</div>
+    </div>
+  </section>
+   
+
+
+<div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+        <h3>YOUR BAG</h3>
+        <span id="close-cart" style="cursor:pointer; letter-spacing:2px;">CLOSE</span>
+    </div>
+    
+    <div id="cart-items-container">
+        <p style="text-align:center; margin-top:50px; font-size:12px; color:#999;">Your bag is currently empty.</p>
+    </div>
+
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>TOTAL</span>
+            <span id="cart-total-amount">$0.00</span>
+        </div>
+        <button class="add-btn" id="checkout-btn">PROCEED TO CHECKOUT</button>
+        <button id="clear-cart" style="background:none; border:none; color:red; font-size:10px; cursor:pointer; margin-top:10px; letter-spacing:1px;">EMPTY BAG</button>
+    </div>
+</div>
+<div id="cart-overlay" class="cart-overlay"></div>
+
+
+
+
+
+<div id="search-overlay" class="search-modal">
+    <span id="close-search">CLOSE [X]</span>
+    <div class="search-content">
+        <input type="text" placeholder="SEARCH OUR FORMULATIONS..." id="search-input">
+        <div class="search-line"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <p>© 2026 SWANELLE. ALL RIGHTS RESERVED.</p>
+  </footer>
+ 
+<script>
+    const cartCountElement = document.getElementById('cart-count');
+    const drawer = document.getElementById('cart-drawer');
+    const overlay = document.getElementById('cart-overlay');
+    const openBtn = document.querySelector('.icons span:last-child');
+    const closeBtn = document.getElementById('close-cart');
+    const clearBtn = document.getElementById('clear-cart');
+    const itemsContainer = document.getElementById('cart-items-container');
+    const totalAmountElement = document.getElementById('cart-total-amount');
+
+    // 1. Load existing items from memory
+    let cart = JSON.parse(localStorage.getItem('swanelleCart')) || [];
+
+    // 2. Function to update the drawer content
+    function updateDrawer() {
+        itemsContainer.innerHTML = "";
+        let total = 0;
+
+        if (cart.length === 0) {
+            itemsContainer.innerHTML = '<p style="text-align:center; margin-top:50px; font-size:12px; color:#999;">Your bag is currently empty.</p>';
+        } else {
+            cart.forEach((item, index) => {
+                total += parseFloat(item.price);
+                itemsContainer.innerHTML += `
+                    <div style="display:flex; justify-content:space-between; margin-bottom:20px; font-size:12px; align-items:center;">
+                        <div>
+                            <p style="font-weight:700; text-transform:uppercase;">${item.name}</p>
+                            <p>$${item.price}</p>
+                        </div>
+                        <span style="cursor:pointer; color:red; font-size:10px;" onclick="removeItem(${index})">REMOVE</span>
+                    </div>
+                `;
+            });
+        }
+        
+        cartCountElement.innerText = cart.length;
+        totalAmountElement.innerText = `$${total.toFixed(2)}`;
+        localStorage.setItem('swanelleCart', JSON.stringify(cart));
+    }
+
+    // 3. Remove single item
+    window.removeItem = (index) => {
+        cart.splice(index, 1);
+        updateDrawer();
+    };
+
+    // 4. Add to Bag Logic
+    document.querySelectorAll('.add-btn:not(#checkout-btn)').forEach(button => {
+        button.addEventListener('click', () => {
+            const name = button.getAttribute('data-name');
+            const price = button.getAttribute('data-price');
+            
+            cart.push({ name, price });
+            updateDrawer();
+
+            // Chic Feedback
+            button.innerText = "ADDED ✓";
+            setTimeout(() => { button.innerText = "ADD TO BAG"; }, 1000);
+            
+            // Open drawer
+            drawer.classList.add('open');
+            overlay.classList.add('open');
+        });
+    });
+
+    // 5. Drawer Controls
+    openBtn.onclick = () => { drawer.classList.add('open'); overlay.classList.add('open'); }
+    closeBtn.onclick = () => { drawer.classList.remove('open'); overlay.classList.remove('open'); }
+    overlay.onclick = () => { drawer.classList.remove('open'); overlay.classList.remove('open'); }
+    clearBtn.onclick = () => { if(confirm("Empty bag?")) { cart = []; updateDrawer(); } }
+
+    // Initialize display on load
+    updateDrawer();
+</script>
+
+
+
+
+
+
+<section class="contact-section" style="padding: 100px 10%; background: #fff; text-align: center;">
+  <h2 style="font-family: 'Playfair Display', serif; letter-spacing: 5px;">GET IN TOUCH</h2>
+  
+  <form action="contact.php" method="POST" style="max-width: 500px; margin: 40px auto; display: flex; flex-direction: column; gap: 20px;">
+    <input type="text" name="user_name" placeholder="FULL NAME" required style="padding: 15px; border: 1px solid #eee; outline: none;">
+    <input type="email" name="user_email" placeholder="EMAIL ADDRESS" required style="padding: 15px; border: 1px solid #eee; outline: none;">
+    <textarea name="user_msg" placeholder="HOW CAN WE HELP YOUR GLOW?" rows="5" required style="padding: 15px; border: 1px solid #eee; outline: none; font-family: inherit;"></textarea>
+    
+    <button type="submit" class="add-btn" style="background: #000; color: #fff; padding: 15px; cursor: pointer; border: none; letter-spacing: 2px;">SEND TO SERVER</button>
+  </form>
+</section>
+
+
+
+
+
+
+
+<script>
+    // This intercepts the form so you don't get the "405 Error"
+    document.querySelector('form[action="contact.php"]').addEventListener('submit', function(e) {
+        // If we aren't on a real PHP server, we "fake" the success
+        if (window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost") {
+            // Check if the port is 5500 (which doesn't support PHP)
+            if (window.location.port === "5500") {
+                e.preventDefault();
+                alert("Demo Mode: Sending data to contact.php...");
+                document.body.innerHTML = `
+                    <div style="text-align:center; padding:100px; font-family:serif;">
+                        <h1>Success! (PHP Simulated)</h1>
+                        <p>In a production environment, contact.php would now process your message.</p>
+                        <a href="index.html" style="color:black;">Return to Swanelle</a>
+                    </div>`;
+            }
+        }
+    });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
